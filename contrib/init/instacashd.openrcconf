@@ -1,0 +1,26 @@
+# /etc/conf.d/instacashd: config file for /etc/init.d/instacashd
+
+# Config file location
+#BITCOIND_CONFIGFILE="/etc/instacash/instacash.conf"
+
+# What directory to write pidfile to?  (created and owned by $BITCOIND_USER)
+#BITCOIND_PIDDIR="/var/run/instacashd"
+
+# What filename to give the pidfile
+#BITCOIND_PIDFILE="${BITCOIND_PIDDIR}/instacashd.pid"
+
+# Where to write instacashd data (be mindful that the blockchain is large)
+#BITCOIND_DATADIR="/var/lib/instacashd"
+
+# User and group to own instacashd process
+#BITCOIND_USER="instacash"
+#BITCOIND_GROUP="instacash"
+
+# Path to instacashd executable
+#BITCOIND_BIN="/usr/bin/instacashd"
+
+# Nice value to run instacashd under
+#BITCOIND_NICE=0
+
+# Additional options (avoid -conf and -datadir, use flags above)
+BITCOIND_OPTS=""

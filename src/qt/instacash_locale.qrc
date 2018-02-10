@@ -1,0 +1,29 @@
+<!DOCTYPE RCC><RCC version="1.0">
+    <qresource prefix="/translations">
+        <file alias="bg">locale/instacash_bg.qm</file>
+        <file alias="ca">locale/instacash_ca.qm</file>
+        <file alias="cs">locale/instacash_cs.qm</file>
+        <file alias="da">locale/instacash_da.qm</file>
+        <file alias="de">locale/instacash_de.qm</file>
+        <file alias="en">locale/instacash_en.qm</file>
+        <file alias="en_US">locale/instacash_en_US.qm</file>
+        <file alias="es">locale/instacash_es.qm</file>
+        <file alias="fi">locale/instacash_fi.qm</file>
+        <file alias="fr_FR">locale/instacash_fr_FR.qm</file>
+        <file alias="it">locale/instacash_it.qm</file>
+        <file alias="ja">locale/instacash_ja.qm</file>
+        <file alias="ko_KR">locale/instacash_ko_KR.qm</file>
+        <file alias="nl">locale/instacash_nl.qm</file>
+        <file alias="pl">locale/instacash_pl.qm</file>
+        <file alias="pt">locale/instacash_pt.qm</file>
+        <file alias="pt_BR">locale/instacash_pt_BR.qm</file>
+        <file alias="ro_RO">locale/instacash_ro_RO.qm</file>
+        <file alias="ru">locale/instacash_ru.qm</file>
+        <file alias="sk">locale/instacash_sk.qm</file>
+        <file alias="sv">locale/instacash_sv.qm</file>
+        <file alias="tr">locale/instacash_tr.qm</file>
+        <file alias="uk">locale/instacash_uk.qm</file>
+        <file alias="zh_CN">locale/instacash_zh_CN.qm</file>
+        <file alias="zh_TW">locale/instacash_zh_TW.qm</file>
+    </qresource>
+</RCC>
