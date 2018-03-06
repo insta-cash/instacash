@@ -6,6 +6,7 @@
  * @copyright  Copyright 2017 InstaCash Developers
  * @license    This project is released under the MIT license.
  **/
+// Copyright (c) 2015-2017 The PIVX developers	
 // Copyright (c) 2015-2017 The InstaCash developers
 
 #include "denomination_functions.h"
