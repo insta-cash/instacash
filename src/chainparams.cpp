@@ -90,17 +90,6 @@ libzerocoin::ZerocoinParams* CChainParams::Zerocoin_Params() const
     return &ZCParams;
 }
 
-void MineGenesis(CBlock genesis, uint256 bnProofOfWorkLimit) {
-    printf("Mining genesis block...\n");
-
-    for (genesis.nNonce == 0; genesis.GetHash() > bnProofOfWorkLimit; genesis.nNonce++) { } 
-
-    printf("Mined genesis block:\n");
-    printf("Merkle root: %s\n", genesis.hashMerkleRoot.ToString().c_str());
-    printf("Nonce: %u\n", genesis.nNonce);
-    printf("Hash: %s\n", genesis.GetHash().ToString().c_str());
-}
-
 class CMainParams : public CChainParams
 {
 public:
