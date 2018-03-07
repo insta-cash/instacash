@@ -1,0 +1,15 @@
+*.dirstamp
+db4
+*.a
+*.o
+*.Po
+*.Plo
+*.deps
+*.guess
+*.status
+*.qm
+*.cache
+*.la
+*.lo
+*.lai
+*.pc
