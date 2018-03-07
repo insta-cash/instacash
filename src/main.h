@@ -160,6 +160,7 @@ extern std::map<unsigned int, unsigned int> mapHashedBlocks;
 extern std::map<COutPoint, COutPoint> mapInvalidOutPoints;
 extern std::map<CBigNum, CAmount> mapInvalidSerials;
 extern std::set<std::pair<COutPoint, unsigned int> > setStakeSeen;
+extern std::map<uint256, int64_t> mapZerocoinspends; //txid, time received
 
 /** Best header we've seen so far (used for getheaders queries' starting points). */
 extern CBlockIndex* pindexBestHeader;
@@ -356,6 +357,7 @@ void UpdateCoins(const CTransaction& tx, CValidationState& state, CCoinsViewCach
 bool CheckTransaction(const CTransaction& tx, bool fZerocoinActive, bool fRejectBadUTXO, CValidationState& state);
 bool CheckZerocoinMint(const uint256& txHash, const CTxOut& txout, CValidationState& state, bool fCheckOnly = false);
 bool CheckZerocoinSpend(const CTransaction tx, bool fVerifySignature, CValidationState& state);
+bool ContextualCheckCoinSpend(const libzerocoin::CoinSpend& spend, CBlockIndex* pindex, const uint256& txid);
 libzerocoin::CoinSpend TxInToZerocoinSpend(const CTxIn& txin);
 bool TxOutToPublicCoin(const CTxOut txout, libzerocoin::PublicCoin& pubCoin, CValidationState& state);
 bool BlockToPubcoinList(const CBlock& block, list<libzerocoin::PublicCoin>& listPubcoins, bool fFilterInvalid);
