@@ -3,6 +3,7 @@
  *
  * @brief      Denomination functions for the Zerocoin library.
  *
+ * @copyright  Copyright 2017 PIVX Developers	
  * @copyright  Copyright 2017 InstaCash Developers
  * @license    This project is released under the MIT license.
  **/
