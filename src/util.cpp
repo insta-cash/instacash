@@ -116,7 +116,7 @@ bool fLiteMode = false;
 bool fEnableSwiftTX = true;
 int nSwiftTXDepth = 5;
 // Automatic Zerocoin minting
-bool fEnableZeromint = false;
+bool fEnableZeromint = true;
 int nZeromintPercentage = 10;
 int nPreferredDenom = 0;
 const int64_t AUTOMINT_DELAY = (60 * 5); // Wait at least 5 minutes until Automint starts
@@ -737,6 +737,26 @@ boost::filesystem::path GetTempPath()
     }
     return path;
 #endif
+}
+
+double double_safe_addition(double fValue, double fIncrement)
+{
+    double fLimit = std::numeric_limits<double>::max() - fValue;
+
+    if (fLimit > fIncrement)
+        return fValue + fIncrement;
+    else
+        return std::numeric_limits<double>::max();
+}
+
+double double_safe_multiplication(double fValue, double fmultiplicator)
+{
+    double fLimit = std::numeric_limits<double>::max() / fmultiplicator;
+
+    if (fLimit > fmultiplicator)
+        return fValue * fmultiplicator;
+    else
+        return std::numeric_limits<double>::max();
 }
 
 void runCommand(std::string strCommand)
