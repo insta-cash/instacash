@@ -162,6 +162,9 @@ color:#333;
 }
 
 QToolTip {
+/* There is a bug in some versio Qt that background-color doesn't work if we don't specify border-style*/
+/* See https://forum.qt.io/topic/24023/qt-c-css-qtooltip-stylesheet-background-colour/2 */
+border-style: none;
 background-color:#dedbe5;
 color:#333;
 }
