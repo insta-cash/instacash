@@ -24,11 +24,6 @@ More information at [instacash.cc](https://instacash.cc) Visit our ANN thread at
 
 ### Reward Distribution
 
-<table>
-<th colspan=4>Genesis Block</th>
-<tr><th>Block Height</th><th>Reward Amount</th><th>Notes</th></tr>
-<tr><td>1</td><td>500,000 ICH</td><td>Initial Pre-mine (Will be burned)</a></td></tr>
-</table>
 
 ### POW REWARD STRUCTURE:
 
