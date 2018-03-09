@@ -15,7 +15,7 @@ More information at [instacash.cc](https://instacash.cc) Visit our ANN thread at
 <tr><td>Algo</td><td>Quark</td></tr>
 <tr><td>Block Time</td><td>30 Seconds</td></tr>
 <tr><td>Difficulty Retargeting</td><td>Every Block</td></tr>
-<tr><td>Max Coin Supply (PoW Phase)</td><td>100,000,000 ICH</td></tr>
+<tr><td>Max Coin Supply (PoW Phase)</td><td>2,400,000 ICH</td></tr>
 <tr><td>Max Coin Supply (PoS Phase)</td><td>Infinite</td></tr>
 <tr><td>Premine</td><td>500,000 ICH*</td></tr>
 </table>
