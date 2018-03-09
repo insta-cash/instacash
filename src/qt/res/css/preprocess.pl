@@ -1,6 +1,8 @@
+#!/usr/bin/perl
 use strict;
 use warnings;
 
+#The style map. Each key will be replaced with the value in default.css
 my %styleMap = (
 	qr/\@widgetBackground\b/ => '#1C1F26',
 	qr/\@mainBackgroun\b/ => '#f8f6f6',
