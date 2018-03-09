@@ -33,7 +33,7 @@ More information at [instacash.cc](https://instacash.cc) Visit our ANN thread at
 <tr><td>10001 – 100000</td><td>25% (2.5 ICH)</td><td>75% (7.5 ICH)</td></tr>
 </table>
 
-Total ICH in circulation in POW: 1,000,000 [phase-1] + 900,000 [phase-2] + 500,000 [premine] = 2,400,000 ICHhttps://bitcointalk.org/index.php?topic=2967147.0
+Total ICH in circulation in POW: 1,000,000 [phase-1] + 900,000 [phase-2] + 500,000 [premine] = 2,400,000 ICH
 
 N.B.: First 10k PoW blocks have 100 ICH reward because many people are well informed about the launch because of per-announcement, so we’ll see big hashrate and high mining difficulty in first few days. so we have increased block rewards for first 3~4 days so that no one get any loss from high difficulty mining. Also it’ll sustain coin value.
 
@@ -45,3 +45,7 @@ N.B.: First 10k PoW blocks have 100 ICH reward because many people are well info
 <tr><td>100,001 – Inf</td><td>5</td><td>75%</td><td>25%</td></tr>
 </table>
 => Block 100,001 – Inf: 5 ICH [MN – 75%] [STAKE – 25%] <=
+
+
+### CONTRIBUTERS: 
+Contributors are welcome, however must contact @CORE TEAM at the [discord](https://discord.gg/ne4tGyZ) and discuss in your area of expertise and contribution. 
