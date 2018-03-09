@@ -8,7 +8,7 @@ InstaCash is an open source crypto-currency focused on fast private transactions
 - Fast transactions featuring guaranteed zero confirmation transactions, we call it _SwiftX_.
 - Decentralized blockchain voting utilizing Masternode technology to form a DAO. The blockchain will distribute monthly treasury funds based on successful proposals submitted by the community and voted on by the DAO.
 
-More information at [instacash.cc](https://instacash.cc) Visit our ANN thread at [BitcoinTalk](https://bitcointalk.org/index.php?topic=2900624.0)
+More information at [instacash.cc](https://instacash.cc) Visit our ANN thread at [BitcoinTalk](https://bitcointalk.org/index.php?topic=2967147.0)
 
 ### Coin Specs
 <table>
@@ -27,7 +27,7 @@ More information at [instacash.cc](https://instacash.cc) Visit our ANN thread at
 <table>
 <th colspan=4>Genesis Block</th>
 <tr><th>Block Height</th><th>Reward Amount</th><th>Notes</th></tr>
-<tr><td>1</td><td>60,000 ICH</td><td>Initial Pre-mine, burnt in block</a></td></tr>
+<tr><td>1</td><td>500,000 ICH</td><td>Initial Pre-mine (Will be burned)</a></td></tr>
 </table>
 
 ### POW REWARD STRUCTURE:
@@ -38,11 +38,15 @@ More information at [instacash.cc](https://instacash.cc) Visit our ANN thread at
 <tr><td>10001 – 100000</td><td>25% (2.5 ICH)</td><td>75% (7.5 ICH)</td></tr>
 </table>
 
-Total ICH in circulation in POW: 1,000,000 [phase-1] + 900,000 [phase-2] + 500,000 [premine] = 2,400,000 ICH
+Total ICH in circulation in POW: 1,000,000 [phase-1] + 900,000 [phase-2] + 500,000 [premine] = 2,400,000 ICHhttps://bitcointalk.org/index.php?topic=2967147.0
 
 N.B.: First 10k PoW blocks have 100 ICH reward because many people are well informed about the launch because of per-announcement, so we’ll see big hashrate and high mining difficulty in first few days. so we have increased block rewards for first 3~4 days so that no one get any loss from high difficulty mining. Also it’ll sustain coin value.
 
  
 
 ### POS REWARD STRUCTURE: 
+<table>
+ <th>Block Height</th><th>Block Reward</th><th>Masternodes</th><th>Stakers</th>
+<tr><td>100,001 – Inf</td><td>5</td><td>75%</td><td>25%</td></tr>
+</table>
 => Block 100,001 – Inf: 5 ICH [MN – 75%] [STAKE – 25%] <=
