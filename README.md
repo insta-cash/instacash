@@ -44,7 +44,7 @@ N.B.: First 10k PoW blocks have 100 ICH reward because many people are well info
  <th>Block Height</th><th>Block Reward</th><th>Masternodes</th><th>Stakers</th>
 <tr><td>100,001 – Inf</td><td>5</td><td>75%</td><td>25%</td></tr>
 </table>
-=> Block 100,001 – Inf: 5 ICH [MN – 75%] [STAKE – 25%] <=
+
 
 
 ### CONTRIBUTERS: 
