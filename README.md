@@ -31,8 +31,12 @@ More information at [instacash.cc](https://instacash.cc) Visit our ANN thread at
 </table>
 
 ### POW REWARD STRUCTURE:
-=> Phase -1: Block 1 – 10000: 100 ICH per block [no MN reward] [3.47~ days] => total 1,000,000 ICH <=
-=> Phase -2: Block 10001 – 100000: 10 ICH per block [Miner Reward is 75% – 7.5 coin per block] [MN reward is 25% – 2.5 coin] [31.25~ days] => total 900,000 ICH <=
+
+<table>
+<th>Block Height</th><th>Masternodes</th><th>Miner</th>
+<tr><td>1 – 10000</td><td>N/A</td><td>100 ICH</td></tr>
+<tr><td>10001 – 100000</td><td>25% (2.5 ICH)</td><td>75% (7.5 ICH)</td></tr>
+</table>
 
 Total ICH in circulation in POW: 1,000,000 [phase-1] + 900,000 [phase-2] + 500,000 [premine] = 2,400,000 ICH
 
