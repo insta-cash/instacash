@@ -68,16 +68,16 @@ color:#333;
 }
 
 QToolBar {
-background-color: qlineargradient(y1:0, y2: 1, stop: 0 @toolbarGradientStart, stop: 0.75 @toolbarGradientStart, stop: 0.99 @toolbarGradientEnd, stop: 1 @toolbarGradientEnd);
+background-color: qlineargradient(x1:0, x2: 1, stop: 0 @toolbarGradientStart, stop: 0.75 @toolbarGradientStart, stop: 0.99 @toolbarGradientEnd, stop: 1 @toolbarGradientEnd);
 border:0px solid #333;
 padding:1;
 margin:0;
-width: 70px;
+/*width: 70px;*/
 }
 
 QToolBar > QToolButton {
 Alignment: left;
-background-color: @widgetBackground;
+background-color: @toolButtonBackground;
 selection-background-color:transparent;
 border:0.5px solid #888;
 border-left: 0px;
@@ -87,8 +87,8 @@ min-height:2.5em;
 padding: 0em 0em;
 font-size: 11px;
 color:#aaa;
-width: 80px;
-height: 60px;
+width: 120px;
+/*height: 60px;*/
 }
 
 QToolBar > QToolButton:checked {
@@ -103,7 +103,7 @@ color:#fff;
 }
 
 QToolBar > QToolButton#ToolbarSpacer:hover:!selected {
-background-color: @widgetBackground; /* Do not highlight placeholder on hover */
+background-color: @toolButtonBackground; /* Do not highlight placeholder on hover */
 }
 
 QToolBar > QToolButton:pressed {
@@ -125,7 +125,7 @@ padding-right:0px;
 }
 
 QProgressBar::chunk {
-background-color:@widgetBackground;
+background-color:@toolButtonBackground;
 width: 20px;
 }
 
@@ -231,7 +231,7 @@ background-color:#f2f2f2;
 
 QPushButton { /* Global Button Style */
 background-color: @widgetBackground; 
-border-width: 1px;
+border-width: @widgetBorderWidth;
 border-style: outset;
 border-color: #1C1F26;
 border-radius: 2px;
@@ -1417,7 +1417,7 @@ padding-right:5px;
 
 QStackedWidget#SendCoinsEntry .QToolButton { /* General Settings for Pay To Icons */
 background-color: @widgetBackground; 
-border-width: 1px;
+border-width: @widgetBorderWidth;
 border-style: outset;
 border-color: #1C1F26;
 border-radius: 2px;
