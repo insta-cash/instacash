@@ -93,13 +93,13 @@ width: 120px;
 }
 
 QToolBar > QToolButton:checked {
-background-color: qlineargradient(x1:0, x2: 1, stop: 0 #BF954D, stop: 0.07 #BF954D, stop: 0.0701 #060A0D, stop: 1 #060A0D);
+background-color: qlineargradient(y1:0, y2: 1, stop: 0 #BF954D, stop: 0.07 #BF954D, stop: 0.0701 #060A0D, stop: 1 #060A0D);
 color:#fff;
 }
 
 /* QToolBar > QToolButton:hover:!selected { */
 QToolBar > QToolButton:hover {
-background-color: qlineargradient(x1:0, x2: 1, stop: 0 #BF954D, stop: 0.07 #BF954D, stop: 0.0701 #060A0D, stop: 1 #060A0D);
+background-color: qlineargradient(y1:0, y2: 1, stop: 0 #BF954D, stop: 0.07 #BF954D, stop: 0.0701 #060A0D, stop: 1 #060A0D);
 color:#fff;
 }
 
@@ -108,7 +108,7 @@ background-color: #1C1F26; /* Do not highlight placeholder on hover */
 }
 
 QToolBar > QToolButton:pressed {
-background-color: qlineargradient(x1:0, x2: 1, stop: 0 #00a300, stop: 0.07 #00a300, stop: 0.0701 #1C1F26, stop: 1 #1C1F26);
+background-color: qlineargradient(y1:0, y2: 1, stop: 0 #00a300, stop: 0.07 #00a300, stop: 0.0701 #1C1F26, stop: 1 #1C1F26);
 color:#fff;
 }
 
