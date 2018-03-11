@@ -68,7 +68,8 @@ color:#333;
 }
 
 QToolBar {
-background-color: qlineargradient(x1:0, x2: 1, stop: 0 @toolbarGradientStart, stop: 0.75 @toolbarGradientStart, stop: 0.99 @toolbarGradientEnd, stop: 1 @toolbarGradientEnd);
+/*background-color: qlineargradient(x1:0, x2: 1, stop: 0 @toolbarGradientStart, stop: 0.75 @toolbarGradientStart, stop: 0.99 @toolbarGradientEnd, stop: 1 @toolbarGradientEnd);*/
+background-color:@toolbarGradientStart;
 border:0px solid #333;
 padding:1;
 margin:0;
