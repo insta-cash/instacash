@@ -4,10 +4,14 @@ use warnings;
 
 #The style map. Each key will be replaced with the value in default.css
 my %styleMap = (
-	qr/\@widgetBackground\b/ => '#1C1F26',
+	qr/\@widgetBackground\b/ => '#BF954D', #'#1C1F26',
+	qr/\@toolButtonBackground\b/ => '#1C1F26',
 	qr/\@mainBackgroun\b/ => '#f8f6f6',
 	qr/\@dialogBackground\b/ => '#fff',
 	qr/\@inputBackground\b/ => '#e7e7e7',
+	qr/\@toolbarGradientStart\b/ => '#060A0D', #'#1C1F26',
+	qr/\@toolbarGradientEnd\b/ => '#BF954D', #'#ffffff',
+	qr/\@widgetBorderWidth\b/ => '0px',
 );
 
 my @styleMapKeys = keys %styleMap;
