@@ -8,6 +8,8 @@ my %styleMap = (
 	qr/\@mainBackgroun\b/ => '#f8f6f6',
 	qr/\@dialogBackground\b/ => '#fff',
 	qr/\@inputBackground\b/ => '#e7e7e7',
+	qr/\@toolbarGradientStart\b/ => '#060A0D', #'#1C1F26',
+	qr/\@toolbarGradientEnd\b/ => '#BF954D', #'#ffffff',
 );
 
 my @styleMapKeys = keys %styleMap;
