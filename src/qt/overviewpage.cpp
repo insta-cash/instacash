@@ -93,9 +93,9 @@ public:
         } else if (!confirmed || fImmature) {
             foreground = COLOR_UNCONFIRMED;
         } else if (amount < 0) {
-            foreground = COLOR_NEGATIVE;
+            foreground = QColor(255, 0, 0); // COLOR_NEGATIVE;
         } else {
-            foreground = COLOR_BLACK;
+            foreground = QColor(0, 255, 0); // COLOR_BLACK;
         }
         painter->setPen(foreground);
         QString amountText = BitcoinUnits::formatWithUnit(unit, amount, true, BitcoinUnits::separatorAlways);
