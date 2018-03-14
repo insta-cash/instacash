@@ -13,6 +13,7 @@
  * client versioning and copyright year
  */
 
+// Don't modify version number here!!! Modify at below!!!
 //! These need to be macros, as clientversion.cpp's and instacash*-res.rc's voodoo requires it
 #define CLIENT_VERSION_MAJOR 1
 #define CLIENT_VERSION_MINOR 1
@@ -29,6 +30,19 @@
 #define COPYRIGHT_YEAR 2017
 
 #endif //HAVE_CONFIG_H
+
+
+#undef CLIENT_VERSION_MAJOR
+#undef CLIENT_VERSION_MINOR
+#undef CLIENT_VERSION_REVISION
+#undef CLIENT_VERSION_BUILD
+
+// Modify version number here!!!
+#define CLIENT_VERSION_MAJOR 1
+#define CLIENT_VERSION_MINOR 2
+#define CLIENT_VERSION_REVISION 0
+#define CLIENT_VERSION_BUILD 0
+
 
 /**
  * Converts the parameter X to a string after macro replacement on X has been performed.
