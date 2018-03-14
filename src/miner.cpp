@@ -452,12 +452,15 @@ CBlockTemplate* CreateNewBlock(const CScript& scriptPubKeyIn, CWallet* pwallet, 
         pblock->nAccumulatorCheckpoint = nCheckpoint;
         pblocktemplate->vTxSigOps[0] = GetLegacySigOpCount(pblock->vtx[0]);
 
+// added temporary back, by wqking
+if(pblock->IsProofOfStake()) {
         CValidationState state;
         if (!TestBlockValidity(state, *pblock, pindexPrev, false, false)) {
             LogPrintf("CreateNewBlock() : TestBlockValidity failed\n");
             mempool.clear();
             return NULL;
         }
+}        
     }
 
     return pblocktemplate.release();
