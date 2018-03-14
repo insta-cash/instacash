@@ -39,7 +39,7 @@ const std::string CLIENT_NAME("InstaCash Core");
 
 //! First, include build.h if requested
 #ifdef HAVE_BUILD_INFO
-#include "build.h"
+//#include "build.h"
 #endif
 
 //! git will put "#define GIT_ARCHIVE 1" on the next line inside archives.
@@ -55,7 +55,7 @@ const std::string CLIENT_NAME("InstaCash Core");
     "v" DO_STRINGIZE(maj) "." DO_STRINGIZE(min) "." DO_STRINGIZE(rev) "." DO_STRINGIZE(build) "-g" commit
 
 #define BUILD_DESC_FROM_UNKNOWN(maj, min, rev, build) \
-    "v" DO_STRINGIZE(maj) "." DO_STRINGIZE(min) "." DO_STRINGIZE(rev) "." DO_STRINGIZE(build) "-unk"
+    "v" DO_STRINGIZE(maj) "." DO_STRINGIZE(min) "." DO_STRINGIZE(rev) "." DO_STRINGIZE(build) /*"-unk"*/
 
 #ifndef BUILD_DESC
 #ifdef BUILD_SUFFIX
@@ -77,6 +77,12 @@ const std::string CLIENT_NAME("InstaCash Core");
 
 const std::string CLIENT_BUILD(BUILD_DESC CLIENT_VERSION_SUFFIX);
 const std::string CLIENT_DATE(BUILD_DATE);
+
+// To debug issues on version number, uncomment below three lines.
+// The first two lines print some values to compile, and the last line stop the compiling.
+//#pragma message "Version: " STRINGIZE(CLIENT_VERSION_MAJOR) "." STRINGIZE(CLIENT_VERSION_MINOR) "." STRINGIZE(CLIENT_VERSION_REVISION) "." STRINGIZE(CLIENT_VERSION_BUILD)
+//#pragma message "CLIENT_BUILD: " STRINGIZE(BUILD_DESC) " "  STRINGIZE(CLIENT_VERSION_SUFFIX)
+//#error aaaaaaaaaaaa
 
 static std::string FormatVersion(int nVersion)
 {
