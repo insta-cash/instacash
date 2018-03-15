@@ -209,6 +209,25 @@ void OverviewPage::setBalance(const CAmount& balance, const CAmount& unconfirmed
         nLockedBalance = pwalletMain->GetLockedCoins();
         nWatchOnlyLockedBalance = pwalletMain->GetLockedWatchOnlyBalance();
     }
+
+    LogPrintf("%s: %s\n",
+		__func__,
+		(std::string("")
+		+ "balance: " + std::to_string(balance) + " " + BitcoinUnits::floorWithUnit(nDisplayUnit, balance, false, BitcoinUnits::separatorAlways).toStdString()
+		+ "unconfirmedBalance: " + std::to_string(unconfirmedBalance) + " " + BitcoinUnits::floorWithUnit(nDisplayUnit, unconfirmedBalance, false, BitcoinUnits::separatorAlways).toStdString()
+		+ "immatureBalance: " + std::to_string(immatureBalance) + " " + BitcoinUnits::floorWithUnit(nDisplayUnit, immatureBalance, false, BitcoinUnits::separatorAlways).toStdString()
+		+ "zerocoinBalance: " + std::to_string(zerocoinBalance) + " " + BitcoinUnits::floorWithUnit(nDisplayUnit, zerocoinBalance, false, BitcoinUnits::separatorAlways).toStdString()
+		+ "unconfirmedZerocoinBalance: " + std::to_string(unconfirmedZerocoinBalance) + " " + BitcoinUnits::floorWithUnit(nDisplayUnit, unconfirmedZerocoinBalance, false, BitcoinUnits::separatorAlways).toStdString()
+		+ "immatureZerocoinBalance: " + std::to_string(immatureZerocoinBalance) + " " + BitcoinUnits::floorWithUnit(nDisplayUnit, immatureZerocoinBalance, false, BitcoinUnits::separatorAlways).toStdString()
+		+ "watchOnlyBalance: " + std::to_string(watchOnlyBalance) + " " + BitcoinUnits::floorWithUnit(nDisplayUnit, watchOnlyBalance, false, BitcoinUnits::separatorAlways).toStdString()
+		+ "watchUnconfBalance: " + std::to_string(watchUnconfBalance) + " " + BitcoinUnits::floorWithUnit(nDisplayUnit, watchUnconfBalance, false, BitcoinUnits::separatorAlways).toStdString()
+		+ "watchImmatureBalance: " + std::to_string(watchImmatureBalance) + " " + BitcoinUnits::floorWithUnit(nDisplayUnit, watchImmatureBalance, false, BitcoinUnits::separatorAlways).toStdString()
+		+ "nLockedBalance: " + std::to_string(nLockedBalance) + " " + BitcoinUnits::floorWithUnit(nDisplayUnit, nLockedBalance, false, BitcoinUnits::separatorAlways).toStdString()
+		+ "nWatchOnlyLockedBalance: " + std::to_string(nWatchOnlyLockedBalance) + " " + BitcoinUnits::floorWithUnit(nWatchOnlyLockedBalance, balance, false, BitcoinUnits::separatorAlways).toStdString()
+		).c_str()
+    );
+
+
     // ICH Balance
     CAmount nTotalBalance = balance + unconfirmedBalance;
     CAmount ichAvailableBalance = balance - immatureBalance - nLockedBalance;
