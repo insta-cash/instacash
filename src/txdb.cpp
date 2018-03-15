@@ -302,6 +302,8 @@ bool CZerocoinDB::WriteCoinMint(const PublicCoin& pubCoin, const uint256& hashTx
     ss << pubCoin.getValue();
     uint256 hash = Hash(ss.begin(), ss.end());
 
+    LogPrintf("%s: %s\n", __func__, hash.GetHex());
+
     return Write(make_pair('m', hash), hashTx, true);
 }
 
@@ -310,6 +312,8 @@ bool CZerocoinDB::ReadCoinMint(const CBigNum& bnPubcoin, uint256& hashTx)
     CDataStream ss(SER_GETHASH, 0);
     ss << bnPubcoin;
     uint256 hash = Hash(ss.begin(), ss.end());
+
+    LogPrintf("%s: %s\n", __func__, hash.GetHex());
 
     return Read(make_pair('m', hash), hashTx);
 }
