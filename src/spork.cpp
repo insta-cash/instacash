@@ -63,31 +63,32 @@ void ProcessSpork(CNode* pfrom, std::string& strCommand, CDataStream& vRecv)
     if (fLiteMode) return; //disable all obfuscation/masternode related functionality
 
     if (strCommand == "spork") {
-        LogPrintf("%s: spork\n", __func__);
+        if(fDebug) LogPrintf("%s: spork\n", __func__);
 
         CDataStream vMsg(vRecv);
         CSporkMessage spork;
         vRecv >> spork;
 
         if (chainActive.Tip() == NULL) {
-			LogPrintf("%s: chainActive.Tip() is null\n", __func__);
+			if(fDebug) LogPrintf("%s: chainActive.Tip() is null\n", __func__);
 			return;
 		}
 
         // Ignore spork messages about unknown/deleted sporks
         std::string strSpork = sporkManager.GetSporkNameByID(spork.nSporkID);
         if (strSpork == "Unknown") {
-			LogPrintf("%s: unknown spork\n", __func__);
+			if(fDebug) LogPrintf("%s: unknown spork\n", __func__);
 			return;
 		}
 
         uint256 hash = spork.GetHash();
         if (mapSporksActive.count(spork.nSporkID)) {
             if (mapSporksActive[spork.nSporkID].nTimeSigned >= spork.nTimeSigned) {
-                LogPrintf("%s: seen %s block %d \n", __func__, hash.ToString(), chainActive.Tip()->nHeight);
+                if(fDebug) LogPrintf("%s: seen %s block %d \n", __func__, hash.ToString(), chainActive.Tip()->nHeight);
+                
                 return;
             } else {
-                LogPrintf("%s: got updated spork %s block %d \n", __func__, hash.ToString(), chainActive.Tip()->nHeight);
+                if(fDebug) LogPrintf("%s: got updated spork %s block %d \n", __func__, hash.ToString(), chainActive.Tip()->nHeight);
             }
         }
 
