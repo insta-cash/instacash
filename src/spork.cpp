@@ -63,31 +63,39 @@ void ProcessSpork(CNode* pfrom, std::string& strCommand, CDataStream& vRecv)
     if (fLiteMode) return; //disable all obfuscation/masternode related functionality
 
     if (strCommand == "spork") {
-        //LogPrintf("ProcessSpork::spork\n");
+        if(fDebug) LogPrintf("%s: spork\n", __func__);
+
         CDataStream vMsg(vRecv);
         CSporkMessage spork;
         vRecv >> spork;
 
-        if (chainActive.Tip() == NULL) return;
+        if (chainActive.Tip() == NULL) {
+			if(fDebug) LogPrintf("%s: chainActive.Tip() is null\n", __func__);
+			return;
+		}
 
         // Ignore spork messages about unknown/deleted sporks
         std::string strSpork = sporkManager.GetSporkNameByID(spork.nSporkID);
-        if (strSpork == "Unknown") return;
+        if (strSpork == "Unknown") {
+			if(fDebug) LogPrintf("%s: unknown spork\n", __func__);
+			return;
+		}
 
         uint256 hash = spork.GetHash();
         if (mapSporksActive.count(spork.nSporkID)) {
             if (mapSporksActive[spork.nSporkID].nTimeSigned >= spork.nTimeSigned) {
-                if (fDebug) LogPrintf("spork - seen %s block %d \n", hash.ToString(), chainActive.Tip()->nHeight);
+                if(fDebug) LogPrintf("%s: seen %s block %d \n", __func__, hash.ToString(), chainActive.Tip()->nHeight);
+                
                 return;
             } else {
-                if (fDebug) LogPrintf("spork - got updated spork %s block %d \n", hash.ToString(), chainActive.Tip()->nHeight);
+                if(fDebug) LogPrintf("%s: got updated spork %s block %d \n", __func__, hash.ToString(), chainActive.Tip()->nHeight);
             }
         }
 
         LogPrintf("spork - new %s ID %d Time %d bestHeight %d\n", hash.ToString(), spork.nSporkID, spork.nValue, chainActive.Tip()->nHeight);
 
         if (!sporkManager.CheckSignature(spork)) {
-            LogPrintf("spork - invalid signature\n");
+            LogPrintf("%s: invalid signature\n", __func__);
             Misbehaving(pfrom->GetId(), 100);
             return;
         }
