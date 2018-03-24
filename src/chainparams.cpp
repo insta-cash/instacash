@@ -123,9 +123,9 @@ public:
 
         /** Height or Time Based Activations **/
         nLastPOWBlock = 100000;
-        nModifierUpdateBlock = 0;
-        nZerocoinStartHeight = 10000000;
-        nZerocoinStartTime = 2000000000; // October 17, 2017 4:30:00 AM
+        nModifierUpdateBlock = 114500;
+        nZerocoinStartHeight = 115000;
+        nZerocoinStartTime = 1522080000; // October 17, 2017 4:30:00 AM
         nBlockEnforceSerialRange = 895400; //Enforce serial range starting this block
         nBlockRecalculateAccumulators = 908000; //Trigger a recalculation of accumulators
         nBlockFirstFraudulent = 891737; //First block that bad serials emerged
