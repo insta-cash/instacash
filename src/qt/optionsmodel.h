@@ -44,6 +44,7 @@ public:
         DatabaseCache,       // int
         SpendZeroConfChange, // bool
         ZeromintEnable,      // bool
+        ZeromintDisable,     // bool
         ZeromintPercentage,  // int
         ZeromintPrefDenom,   // int
         HideZeroBalances,    // bool
